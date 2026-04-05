@@ -8,11 +8,11 @@ docker exec).
 
 Usage
 -----
-From a Jupyter terminal (File → New Terminal):
-    python project/produce.py
+From a Jupyter terminal (File → New Terminal), repo root is ~/project:
+    cd ~/project && python produce.py
 
-From a host terminal:
-    docker exec project2_jupyter python /home/jovyan/project/produce.py
+From a host terminal (use Conda Python so PySpark-dependent tools work):
+    docker exec project2_jupyter /opt/conda/bin/python /home/jovyan/project/produce.py
 
 Options:
     --data      Path to the parquet file          (default: data/yellow_tripdata_2025-01.parquet)
